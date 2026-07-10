@@ -1,38 +1,49 @@
+---
+import { Image } from "astro:assets";
+
+import HuaweiLogo from "../../public/images/branches/huawei.webp";
+import SonnenLogo from "../../public/images/branches/sonnen.webp";
+import CanadianSolarLogo from "../../public/images/branches/canadian-solar.webp";
+import SolarEdgeLogo from "../../public/images/branches/solar-edge.svg";
+import LongiSolarLogo from "../../public/images/branches/longi-solar.webp";
+import IronRidgeLogo from "../../public/images/branches/iron-ridge.webp";
+---
+
 <section id="marcas" class="py-10">
 	<div class="mx-auto w-full px-10">
 		<div class="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-6">
-			<img
-				src="https://logos-world.net/wp-content/uploads/2020/04/Huawei-Emblem.png"
+			<Image
+				src={HuaweiLogo}
 				alt="Huawei"
 				class="size-40 object-contain grayscale transition hover:grayscale-0"
 			/>
 
-			<img
-				src="https://sonnengroup.com/_nuxt/img/sonnen-logo.a1eee1a.svg"
+			<Image
+				src={SonnenLogo}
 				alt="Sonnen"
 				class="size-40 object-contain grayscale transition hover:grayscale-0"
 			/>
 
-			<img
-				src="https://suncore.com.mx/wp-content/uploads/2021/04/logo-canadian-solar.png"
+			<Image
+				src={CanadianSolarLogo}
 				alt="Canadian Solar"
 				class="size-40 object-contain grayscale transition hover:grayscale-0"
 			/>
 
-			<img
-				src="https://www.solaredge.com/es/sites/es/files/SolarEdge_logo_header_new_0.svg"
+			<Image
+				src={SolarEdgeLogo}
 				alt="SolarEdge"
 				class="size-40 object-contain grayscale transition hover:grayscale-0"
 			/>
 
-			<img
-				src="https://suncore.com.mx/wp-content/uploads/2021/04/logo-longi-solar.png"
+			<Image
+				src={LongiSolarLogo}
 				alt="Longi Solar"
 				class="size-40 object-contain grayscale transition hover:grayscale-0"
 			/>
 
-			<img
-				src="https://boxedsolar.com/wp-content/uploads/Logo-IronRidge.png"
+			<Image
+				src={IronRidgeLogo}
 				alt="IronRidge"
 				class="size-40 object-contain grayscale transition hover:grayscale-0"
 			/>
