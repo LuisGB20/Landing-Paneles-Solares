@@ -24,7 +24,7 @@ Este proyecto fue desarrollado con el objetivo de transformar una plataforma des
 - **Optimización de UX:** Implementación de un menú de navegación intuitivo y navegación fluida entre secciones.
 
 ## 🔗 Demo
-https://tirandoscript.com.mx/
+https://solnativa.tirandoscript.com
 
 ---
 *Desarrollado por TirandoScript - https://tirandoscript.com.mx/*
