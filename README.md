@@ -19,7 +19,7 @@ Este proyecto fue desarrollado con el objetivo de transformar una plataforma des
 - **SEO & Accesibilidad:** Código semántico optimizado para buscadores y una estructura clara para lectores de pantalla.
 
 ## 🔗 Demo
-https://solnativa.tirandoscript.com
+https://demo.solnativa.tirandoscript.com
 
 ---
-*Desarrollado por TirandoScript - https://tirandoscript.com.mx/*
+*Desarrollado por TirandoScript - https://tirandoscript.com.mx*
