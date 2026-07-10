@@ -18,11 +18,6 @@ Este proyecto fue desarrollado con el objetivo de transformar una plataforma des
 - **Rendimiento Extremo:** Carga ultra rápida gracias a la arquitectura de Astro, eliminando *overhead* innecesario.
 - **SEO & Accesibilidad:** Código semántico optimizado para buscadores y una estructura clara para lectores de pantalla.
 
-## 💡 Retos Superados
-- **Refactorización de Código Legado:** Transformación de un proyecto escolar en un producto profesional, implementando buenas prácticas de componentes y tipado.
-- **Responsividad Compleja:** Resolución de problemas de desbordamiento (*overflow*) mediante CSS moderno y uso estratégico de *grids* de Tailwind.
-- **Optimización de UX:** Implementación de un menú de navegación intuitivo y navegación fluida entre secciones.
-
 ## 🔗 Demo
 https://solnativa.tirandoscript.com
 
