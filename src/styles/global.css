@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme{
+  --color-primary: #002463;
+  --color-secondary: #2F3E46;
+  --color-accent: #FDB813;
+  --color-baseLight: #FAFDFD;
+  --color-baseDark: #0C0C0C;
+}
+
+
+html,
+body {
+  background-color: var(--color-baseLight);
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+[x-cloak] {
+    display: none !important;
+}

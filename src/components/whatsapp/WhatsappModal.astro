@@ -1,0 +1,144 @@
+<div
+	id="whatsappModal"
+	class="fixed h-screen p-10 flex justify-center items-center inset-0 z-50 hidden bg-black/40 sm:items-center"
+>
+	<div
+		class="flex h-[80vh] w-full flex-col overflow-hidden rounded-3xl bg-white inset-0 m-auto shadow-2xl sm:h-[600px] sm:w-[400px] sm:rounded-3xl"
+	>
+		<!-- HEADER -->
+		<header
+			class="flex items-center justify-between bg-[#008069] p-4 text-white"
+		>
+			<div class="flex items-center gap-3">
+				<img src="/src/assets/logo.png" alt="logo" class="size-8" />
+
+				<div>
+					<p class="font-semibold">SolNativa Energy</p>
+
+					<div class="flex items-center gap-1 text-xs">
+						<span class="h-2 w-2 rounded-full bg-green-300"></span>
+
+						<p class="text-xs opacity-90">
+							En línea • Normalmente responde rápido
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<button
+				id="closeWhatsapp"
+				class="text-2xl hover:bg-white/20 p-1 rounded-full w-8 h-8 flex items-center justify-center transition-colors cursor-pointer"
+				>✕</button
+			>
+		</header>
+
+		<!-- CHAT -->
+		<div
+			class="flex-1 space-y-4 overflow-y-auto bg-cover bg-center p-4"
+			style="background-image:url('images/whatsapp/background.png')"
+		>
+			<div class="rounded-2xl rounded-tl-none bg-white p-4 shadow">
+				<p class="font-light text-slate-600">
+					👋 Hola, soy el asistente virtual de SolNativa. Para
+					brindarte la mejor atención, necesito algunos datos.
+				</p>
+			</div>
+
+			<div
+				id="error"
+				class="hidden font-light rounded-2xl rounded-tl-none bg-[#c11f48] text-white p-4 shadow"
+			>
+				❌ Error al enviar los datos. Por favor, verifica la información ingresada e inténtalo nuevamente.
+			</div>
+
+			<div id="formBox" class="rounded-2xl bg-white p-4 shadow space-y-3">
+				<input
+					id="name"
+					placeholder="Nombre"
+					class="w-full rounded-lg border border-gray-300 px-3 py-3 focus:border-transparent focus:ring-2 focus:ring-[#008069] outline-none"
+				/>
+
+				<input
+					id="phone"
+					placeholder="Teléfono"
+					class="w-full rounded-lg border border-gray-300 px-3 py-3 focus:border-transparent focus:ring-2 focus:ring-[#008069] outline-none"
+				/>
+
+				<textarea
+					id="message"
+					placeholder="¿Qué necesitas?"
+					rows="5"
+					class="w-full rounded-lg border border-gray-300 px-3 py-3 focus:border-transparent focus:ring-2 focus:ring-[#008069] outline-none"
+				></textarea>
+
+				<button
+					id="sendWhatsapp"
+					class="w-full rounded-lg bg-[#008069] py-3 text-white"
+				>
+					Continuar en WhatsApp
+				</button>
+			</div>
+
+			<div
+				id="success"
+				class="hidden font-light rounded-2xl rounded-tl-none bg-[#d9fdd3] p-4 shadow"
+			>
+				✅ Datos enviados. Un asesor se pondrá en contacto pronto
+				contigo.
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	const modal = document.querySelector("#whatsappModal");
+	const close = document.querySelector("#closeWhatsapp");
+	const send = document.querySelector("#sendWhatsapp");
+	const success = document.querySelector("#success");
+	const formBox = document.querySelector("#formBox");
+	const error = document.querySelector("#error");
+
+	send?.addEventListener("click", () => {
+		const name = document.querySelector("#name").value;
+
+		const phone = document.querySelector("#phone").value;
+
+		const message = document.querySelector("#message").value;
+
+		if (!name || !phone) {
+			error.classList.remove("hidden");
+
+			return;
+		}
+
+		const text = `*Nueva solicitud de información*
+
+Hola, me gustaría recibir información sobre sus soluciones de energía solar.
+
+*Nombre:*
+${name}
+
+*Teléfono:*
+${phone}
+
+*Consulta:*
+${message}
+
+Quedo atento(a) a su respuesta. ¡Gracias!
+`;
+
+		const url =
+			"https://wa.me/529987053603?text=" + encodeURIComponent(text);
+
+		window.open(url, "_blank");
+
+		error.classList.add("hidden");
+		success.classList.remove("hidden");
+		success.classList.add("animate-[fadeIn_.3s_ease]");
+		formBox.classList.add("hidden");
+	});
+
+	close?.addEventListener("click", () => {
+		modal.classList.add("hidden");
+	});
+</script>

@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../assets/logo.png";
+import FacebookIcon from "../assets/icons/facebook.svg";
+import InstagramIcon from "../assets/icons/instagram.svg";
+import WhatsappIcon from "../assets/icons/whatsapp.svg";
+import XIcon from "../assets/icons/x.svg";
+---
+
+<footer class="w-full bg-primary text-baseLight">
+	<div class="mx-auto w-full px-10 py-10">
+		<div class="flex flex-col items-center">
+			<div class="flex items-center">
+				<Image src={Logo} alt="Logo" class="size-8 mr-2" />
+				<h3 class="text-xl md:text-3xl font-extrabold text-baseLight">
+					SolNativa | Energía Solar
+				</h3>
+			</div>
+
+			<ul class="mt-6 font-base space-x-10 text-sm md:text-base grid grid-cols-3 md:grid-cols-6 gap-5 text-center">
+				<li>
+					<a href="/" class="transition hover:text-secondary"
+						>Inicio</a
+					>
+				</li>
+
+				<li>
+					<a href="#nosotros" class="transition hover:text-secondary"
+						>Nosotros</a
+					>
+				</li>
+
+				<li class="mr-0 md:mr-10">
+					<a href="#servicios" class="transition hover:text-secondary"
+						>Productos</a
+					>
+				</li>
+
+				<li>
+					<a href="#servicios" class="transition hover:text-secondary"
+						>Servicios</a
+					>
+				</li>
+
+				<li>
+					<a href="#proyectos" class="transition hover:text-secondary"
+						>Proyectos</a
+					>
+				</li>
+
+				<li>
+					<a href="#contacto" class="transition hover:text-secondary"
+						>Contacto</a
+					>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="border-t border-baseLight">
+		<div
+			class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-baseLight md:flex-row"
+		>
+			<p class="text-center md:text-start">
+				© 2026 <span class="font-semibold"
+					>SolNativa Energy</span
+				>. Todos los derechos reservados.
+			</p>
+
+			<div class="flex gap-4">
+				<a href="#" class="flex h-11 w-11 items-center justify-center">
+          <Image src={FacebookIcon} alt="Facebook" class="size-8 hover:scale-110 duration-150 ease-in-out" />
+				</a>
+
+				<a href="#" class="flex h-11 w-11 items-center justify-center">
+          <Image src={InstagramIcon} alt="Instagram" class="size-8 hover:scale-110 duration-150 ease-in-out" />
+				</a>
+
+				<a href="#" class="flex h-11 w-11 items-center justify-center">
+          <Image src={WhatsappIcon} alt="WhatsApp" class="size-8 hover:scale-110 duration-150 ease-in-out" />
+				</a>
+
+				<a href="#" class="flex h-11 w-11 items-center justify-center">
+          <Image src={XIcon} alt="X" class="size-8 hover:scale-110 duration-150 ease-in-out" />
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
