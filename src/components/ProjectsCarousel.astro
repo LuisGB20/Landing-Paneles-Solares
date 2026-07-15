@@ -8,92 +8,261 @@ import Project5 from "../../public/images/projects/project-2.webp";
 ---
 
 <section id="proyectos" class="py-10 overflow-hidden">
-  <div class="mx-auto w-full px-10">
-    <div class="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-      <div class="text-center lg:text-start">
-        <h2 class="mt-5 text-3xl font-bold text-primary md:text-5xl">
-          Proyectos que generan resultados
-        </h2>
-        <p class="mt-5 max-w-2xl text-secondary">
-          Descubre algunos de los sistemas fotovoltaicos que hemos instalado para hogares, comercios y empresas de la Riviera Maya.
-        </p>
-      </div>
-    </div>
-  </div>
+	<div class="mx-auto w-full px-10">
+		<div class="mb-14 flex items-end justify-between">
+			<div>
+				<h2 class="mt-5 text-3xl font-bold text-primary md:text-5xl">
+					Proyectos que generan resultados
+				</h2>
 
-  <div class="flex gap-8 overflow-x-auto px-6 pb-4 scrollbar-hide snap-x snap-mandatory">
-    <article class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary">
-      <div class="relative h-80 overflow-hidden">
-        <Image src={Project1} alt="Hotel Boutique Riviera" width={700} height={320} class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-        <span class="absolute left-5 top-5 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase text-baseLight">Hotelero</span>
-      </div>
-      <div class="p-6">
-        <h3 class="text-2xl font-bold text-baseLight">Hotel Boutique Riviera</h3>
-        <p class="mt-2 text-baseLight">Cancún, Quintana Roo</p>
-        <p class="mt-4 text-baseLight">Instalación de un sistema fotovoltaico para reducir el consumo eléctrico y mejorar la eficiencia energética del hotel.</p>
-      </div>
-    </article>
+				<p class="mt-5 max-w-2xl text-secondary">
+					Descubre algunos de los sistemas fotovoltaicos que hemos
+					instalado para hogares, comercios y empresas de la Riviera
+					Maya.
+				</p>
+			</div>
 
-    <article class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary">
-      <div class="relative h-80 overflow-hidden">
-        <Image src={Project2} alt="Residencial Aqua" width={700} height={320} class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-        <span class="absolute left-5 top-5 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase text-baseLight">Residencial</span>
-      </div>
-      <div class="p-6">
-        <h3 class="text-2xl font-bold text-baseLight">Residencial Aqua</h3>
-        <p class="mt-2 text-baseLight">Cancún, Quintana Roo</p>
-        <p class="mt-4 text-baseLight">Sistema residencial diseñado para disminuir el costo del recibo de luz y aprovechar la energía solar durante todo el año.</p>
-      </div>
-    </article>
+			<div class="hidden gap-3 lg:flex">
+				<button
+					id="prevProject"
+					class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition hover:opacity-80"
+				>
+					←
+				</button>
 
-    <article class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary">
-      <div class="relative h-80 overflow-hidden">
-        <Image src={Project3} alt="Restaurante La Isla" width={700} height={320} class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-        <span class="absolute left-5 top-5 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase text-baseLight">Comercial</span>
-      </div>
-      <div class="p-6">
-        <h3 class="text-2xl font-bold text-baseLight">Restaurante La Isla</h3>
-        <p class="mt-2 text-baseLight">Zona Hotelera, Cancún</p>
-        <p class="mt-4 text-baseLight">Proyecto comercial enfocado en reducir los gastos operativos mediante energía limpia y renovable.</p>
-      </div>
-    </article>
+				<button
+					id="nextProject"
+					class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition hover:opacity-80"
+				>
+					→
+				</button>
+			</div>
+		</div>
+	</div>
 
-    <article class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary">
-      <div class="relative h-80 overflow-hidden">
-        <Image src={Project4} alt="Condominios Mar Azul" width={700} height={320} class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-        <span class="absolute left-5 top-5 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase text-baseLight">Residencial</span>
-      </div>
-      <div class="p-6">
-        <h3 class="text-2xl font-bold text-baseLight">Condominios Mar Azul</h3>
-        <p class="mt-2 text-baseLight">Puerto Morelos</p>
-        <p class="mt-4 text-baseLight">Implementación de paneles solares para las áreas comunes del complejo, logrando un importante ahorro energético.</p>
-      </div>
-    </article>
+	<div
+		id="projectsCarousel"
+		class="flex gap-8 overflow-hidden px-6 scroll-smooth"
+	>
+		<article
+			class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] overflow-hidden rounded-3xl bg-primary"
+		>
+			<div class="relative h-80 overflow-hidden">
+				<Image
+					src={Project1}
+					alt="Hotel Boutique Riviera"
+					width={700}
+					height={320}
+					class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+				/>
+				<div
+					class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
+				>
+				</div>
+			</div>
 
-    <article class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary">
-      <div class="relative h-80 overflow-hidden">
-        <Image src={Project5} alt="Centro Logístico Caribe" width={700} height={320} class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-        <span class="absolute left-5 top-5 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase text-baseLight">Industrial</span>
-      </div>
-      <div class="p-6">
-        <h3 class="text-2xl font-bold text-baseLight">Centro Logístico Caribe</h3>
-        <p class="mt-2 text-baseLight">Cancún, Quintana Roo</p>
-        <p class="mt-4 text-baseLight">Solución fotovoltaica para optimizar el consumo eléctrico de las operaciones industriales y administrativas.</p>
-      </div>
-    </article>
-  </div>
+			<div class="p-6">
+				<h3 class="text-2xl font-bold text-baseLight">
+					Hotel Boutique Riviera
+				</h3>
+
+				<p class="mt-2 text-baseLight">Cancún, Quintana Roo</p>
+
+				<p class="mt-4 text-baseLight">
+					Instalación de un sistema fotovoltaico para reducir el
+					consumo eléctrico y mejorar la eficiencia energética del
+					hotel.
+				</p>
+			</div>
+		</article>
+
+		<article
+			class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary"
+		>
+			<div class="relative h-80 overflow-hidden">
+				<Image
+					src={Project2}
+					alt="Residencial Aqua"
+					width={700}
+					height={320}
+					class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+				/>
+				<div
+					class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
+				>
+				</div>
+				<span
+					class="absolute left-5 top-5 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase text-baseLight"
+					>Residencial</span
+				>
+			</div>
+			<div class="p-6">
+				<h3 class="text-2xl font-bold text-baseLight">
+					Residencial Aqua
+				</h3>
+				<p class="mt-2 text-baseLight">Cancún, Quintana Roo</p>
+				<p class="mt-4 text-baseLight">
+					Sistema residencial diseñado para disminuir el costo del
+					recibo de luz y aprovechar la energía solar durante todo el
+					año.
+				</p>
+			</div>
+		</article>
+
+		<article
+			class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary"
+		>
+			<div class="relative h-80 overflow-hidden">
+				<Image
+					src={Project3}
+					alt="Restaurante La Isla"
+					width={700}
+					height={320}
+					class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+				/>
+				<div
+					class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
+				>
+				</div>
+				<span
+					class="absolute left-5 top-5 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase text-baseLight"
+					>Comercial</span
+				>
+			</div>
+			<div class="p-6">
+				<h3 class="text-2xl font-bold text-baseLight">
+					Restaurante La Isla
+				</h3>
+				<p class="mt-2 text-baseLight">Zona Hotelera, Cancún</p>
+				<p class="mt-4 text-baseLight">
+					Proyecto comercial enfocado en reducir los gastos operativos
+					mediante energía limpia y renovable.
+				</p>
+			</div>
+		</article>
+
+		<article
+			class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary"
+		>
+			<div class="relative h-80 overflow-hidden">
+				<Image
+					src={Project4}
+					alt="Condominios Mar Azul"
+					width={700}
+					height={320}
+					class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+				/>
+				<div
+					class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
+				>
+				</div>
+				<span
+					class="absolute left-5 top-5 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase text-baseLight"
+					>Residencial</span
+				>
+			</div>
+			<div class="p-6">
+				<h3 class="text-2xl font-bold text-baseLight">
+					Condominios Mar Azul
+				</h3>
+				<p class="mt-2 text-baseLight">Puerto Morelos</p>
+				<p class="mt-4 text-baseLight">
+					Implementación de paneles solares para las áreas comunes del
+					complejo, logrando un importante ahorro energético.
+				</p>
+			</div>
+		</article>
+
+		<article
+			class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary"
+		>
+			<div class="relative h-80 overflow-hidden">
+				<Image
+					src={Project5}
+					alt="Centro Logístico Caribe"
+					width={700}
+					height={320}
+					class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+				/>
+				<div
+					class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
+				>
+				</div>
+				<span
+					class="absolute left-5 top-5 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase text-baseLight"
+					>Industrial</span
+				>
+			</div>
+			<div class="p-6">
+				<h3 class="text-2xl font-bold text-baseLight">
+					Centro Logístico Caribe
+				</h3>
+				<p class="mt-2 text-baseLight">Cancún, Quintana Roo</p>
+				<p class="mt-4 text-baseLight">
+					Solución fotovoltaica para optimizar el consumo eléctrico de
+					las operaciones industriales y administrativas.
+				</p>
+			</div>
+		</article>
+	</div>
 </section>
 
-<style>
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-  .scrollbar-hide {
-    scrollbar-width: none;
-  }
-</style>
+<script>
+	const carousel = document.getElementById("projectsCarousel");
+	const next = document.getElementById("nextProject");
+	const prev = document.getElementById("prevProject");
+
+	function getCardWidth() {
+		const card = carousel.querySelector("article");
+		return card.offsetWidth + 32;
+	}
+
+	next.addEventListener("click", () => {
+		carousel.scrollBy({
+			left: getCardWidth(),
+			behavior: "smooth",
+		});
+	});
+
+	next.addEventListener("click", () => {
+		const step = getCardWidth();
+
+		if (
+			carousel.scrollLeft + carousel.clientWidth >=
+			carousel.scrollWidth - 10
+		) {
+			carousel.scrollTo({
+				left: 0,
+				behavior: "smooth",
+			});
+		} else {
+			carousel.scrollBy({
+				left: step,
+				behavior: "smooth",
+			});
+		}
+	});
+
+	prev.addEventListener("click", () => {
+		const step = getCardWidth();
+
+		if (carousel.scrollLeft <= 10) {
+			carousel.scrollTo({
+				left: carousel.scrollWidth,
+				behavior: "smooth",
+			});
+		} else {
+			carousel.scrollBy({
+				left: -step,
+				behavior: "smooth",
+			});
+		}
+	});
+
+	prev.addEventListener("click", () => {
+		carousel.scrollBy({
+			left: -getCardWidth(),
+			behavior: "smooth",
+		});
+	});
+</script>
