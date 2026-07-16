@@ -7,32 +7,32 @@ import Project4 from "../../public/images/projects/project-4.webp";
 import Project5 from "../../public/images/projects/project-2.webp";
 ---
 
-<section id="proyectos" class="py-10 overflow-hidden">
+<section id="proyectos" class="py-5 md:py-10 overflow-hidden">
 	<div class="mx-auto w-full px-10">
-		<div class="mb-14 flex items-end justify-between">
+		<div class="mb-7 lg:mb-14 flex flex-col lg:flex-row items-end justify-between">
 			<div>
-				<h2 class="mt-5 text-3xl font-bold text-primary md:text-5xl">
+				<h2 class="mt-5 text-2xl md:text-3xl lg:text-5xl font-bold text-primary">
 					Proyectos que generan resultados
 				</h2>
 
-				<p class="mt-5 max-w-2xl text-secondary">
+				<p class="mt-5 text-base lg:text-lg max-w-2xl text-secondary">
 					Descubre algunos de los sistemas fotovoltaicos que hemos
 					instalado para hogares, comercios y empresas de la Riviera
 					Maya.
 				</p>
 			</div>
 
-			<div class="hidden gap-3 lg:flex">
+			<div class="flex m-auto lg:m-0 mt-5 gap-3">
 				<button
 					id="prevProject"
-					class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition hover:opacity-80"
+					class="flex cursor-pointer h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition hover:opacity-80"
 				>
 					←
 				</button>
 
 				<button
 					id="nextProject"
-					class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition hover:opacity-80"
+					class="flex cursor-pointer h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition hover:opacity-80"
 				>
 					→
 				</button>
@@ -42,18 +42,16 @@ import Project5 from "../../public/images/projects/project-2.webp";
 
 	<div
 		id="projectsCarousel"
-		class="flex gap-8 overflow-hidden px-6 scroll-smooth"
+		class="flex gap-8 w-full min-h-96 overflow-x-auto lg:overflow-x-hidden scroll-smooth px-10"
 	>
 		<article
-			class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] overflow-hidden rounded-3xl bg-primary"
+			class="min-w-full lg:min-w-1/2 max-h-96 lg:max-h-128 group overflow-hidden rounded-3xl bg-primary"
 		>
-			<div class="relative h-80 overflow-hidden">
+			<div class="relative overflow-hidden">
 				<Image
 					src={Project1}
 					alt="Hotel Boutique Riviera"
-					width={700}
-					height={320}
-					class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+					class="w-full h-[180px] lg:h-[320px] object-cover transition duration-700 group-hover:scale-110"
 				/>
 				<div
 					class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
@@ -67,13 +65,13 @@ import Project5 from "../../public/images/projects/project-2.webp";
 			</div>
 
 			<div class="p-6">
-				<h3 class="text-2xl font-bold text-baseLight">
+				<h3 class="text-xl lg:text-2xl font-bold text-baseLight">
 					Hotel Boutique Riviera
 				</h3>
 
 				<p class="mt-2 text-baseLight">Cancún, Quintana Roo</p>
 
-				<p class="mt-4 text-baseLight">
+				<p class="mt-4 text-sm lg:text-base text-baseLight">
 					Instalación de un sistema fotovoltaico para reducir el
 					consumo eléctrico y mejorar la eficiencia energética del
 					hotel.
@@ -82,15 +80,13 @@ import Project5 from "../../public/images/projects/project-2.webp";
 		</article>
 
 		<article
-			class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary"
+			class="min-w-full lg:min-w-1/2 max-h-96 lg:max-h-128 group overflow-hidden rounded-3xl bg-primary"
 		>
-			<div class="relative h-80 overflow-hidden">
+			<div class="relative  overflow-hidden">
 				<Image
 					src={Project2}
 					alt="Residencial Aqua"
-					width={700}
-					height={320}
-					class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+					class="h-[180px] lg:h-[320px] w-full object-cover transition duration-700 group-hover:scale-110"
 				/>
 				<div
 					class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
@@ -102,11 +98,11 @@ import Project5 from "../../public/images/projects/project-2.webp";
 				>
 			</div>
 			<div class="p-6">
-				<h3 class="text-2xl font-bold text-baseLight">
+				<h3 class="text-xl lg:text-2xl font-bold text-baseLight">
 					Residencial Aqua
 				</h3>
 				<p class="mt-2 text-baseLight">Cancún, Quintana Roo</p>
-				<p class="mt-4 text-baseLight">
+				<p class="mt-4 text-sm lg:text-base text-baseLight">
 					Sistema residencial diseñado para disminuir el costo del
 					recibo de luz y aprovechar la energía solar durante todo el
 					año.
@@ -115,15 +111,15 @@ import Project5 from "../../public/images/projects/project-2.webp";
 		</article>
 
 		<article
-			class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary"
+			class="min-w-full lg:min-w-1/2 max-h-96 lg:max-h-128 group overflow-hidden rounded-3xl bg-primary"
 		>
-			<div class="relative h-80 overflow-hidden">
+			<div class="relative overflow-hidden">
 				<Image
 					src={Project3}
 					alt="Restaurante La Isla"
 					width={700}
-					height={320}
-					class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+					height={400}
+					class="w-full h-[180px] lg:h-[320px] object-cover transition duration-700 group-hover:scale-110"
 				/>
 				<div
 					class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
@@ -135,11 +131,11 @@ import Project5 from "../../public/images/projects/project-2.webp";
 				>
 			</div>
 			<div class="p-6">
-				<h3 class="text-2xl font-bold text-baseLight">
+				<h3 class="text-xl lg:text-2xl font-bold text-baseLight">
 					Restaurante La Isla
 				</h3>
 				<p class="mt-2 text-baseLight">Zona Hotelera, Cancún</p>
-				<p class="mt-4 text-baseLight">
+				<p class="mt-4 text-sm lg:text-base text-baseLight">
 					Proyecto comercial enfocado en reducir los gastos operativos
 					mediante energía limpia y renovable.
 				</p>
@@ -147,15 +143,15 @@ import Project5 from "../../public/images/projects/project-2.webp";
 		</article>
 
 		<article
-			class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary"
+			class="min-w-full lg:min-w-1/2 max-h-96 lg:max-h-128 group overflow-hidden rounded-3xl bg-primary"
 		>
-			<div class="relative h-80 overflow-hidden">
+			<div class="relative  overflow-hidden">
 				<Image
 					src={Project4}
 					alt="Condominios Mar Azul"
 					width={700}
-					height={320}
-					class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+					height={400}
+					class="w-full h-[180px] lg:h-[320px] object-cover transition duration-700 group-hover:scale-110"
 				/>
 				<div
 					class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
@@ -167,11 +163,11 @@ import Project5 from "../../public/images/projects/project-2.webp";
 				>
 			</div>
 			<div class="p-6">
-				<h3 class="text-2xl font-bold text-baseLight">
+				<h3 class="text-xl lg:text-2xl font-bold text-baseLight">
 					Condominios Mar Azul
 				</h3>
 				<p class="mt-2 text-baseLight">Puerto Morelos</p>
-				<p class="mt-4 text-baseLight">
+				<p class="mt-4 text-sm lg:text-base text-baseLight">
 					Implementación de paneles solares para las áreas comunes del
 					complejo, logrando un importante ahorro energético.
 				</p>
@@ -179,15 +175,15 @@ import Project5 from "../../public/images/projects/project-2.webp";
 		</article>
 
 		<article
-			class="group min-w-[350px] max-w-[350px] lg:min-w-[700px] lg:max-w-[700px] snap-start overflow-hidden rounded-3xl bg-primary"
+			class="min-w-full lg:min-w-1/2 max-h-96 lg:max-h-128 group overflow-hidden rounded-3xl bg-primary"
 		>
-			<div class="relative h-80 overflow-hidden">
+			<div class="relative  overflow-hidden">
 				<Image
 					src={Project5}
 					alt="Centro Logístico Caribe"
 					width={700}
-					height={320}
-					class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+					height={400}
+					class="w-full h-[180px] lg:h-[320px] object-cover transition duration-700 group-hover:scale-110"
 				/>
 				<div
 					class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
@@ -199,11 +195,11 @@ import Project5 from "../../public/images/projects/project-2.webp";
 				>
 			</div>
 			<div class="p-6">
-				<h3 class="text-2xl font-bold text-baseLight">
+				<h3 class="text-xl lg:text-2xl font-bold text-baseLight">
 					Centro Logístico Caribe
 				</h3>
 				<p class="mt-2 text-baseLight">Cancún, Quintana Roo</p>
-				<p class="mt-4 text-baseLight">
+				<p class="mt-4 text-sm lg:text-base text-baseLight">
 					Solución fotovoltaica para optimizar el consumo eléctrico de
 					las operaciones industriales y administrativas.
 				</p>
@@ -217,17 +213,13 @@ import Project5 from "../../public/images/projects/project-2.webp";
 	const next = document.getElementById("nextProject");
 	const prev = document.getElementById("prevProject");
 
+
 	function getCardWidth() {
+		if(carousel == null) return;
 		const card = carousel.querySelector("article");
 		return card.offsetWidth + 32;
 	}
 
-	next.addEventListener("click", () => {
-		carousel.scrollBy({
-			left: getCardWidth(),
-			behavior: "smooth",
-		});
-	});
 
 	next.addEventListener("click", () => {
 		const step = getCardWidth();
@@ -264,10 +256,4 @@ import Project5 from "../../public/images/projects/project-2.webp";
 		}
 	});
 
-	prev.addEventListener("click", () => {
-		carousel.scrollBy({
-			left: -getCardWidth(),
-			behavior: "smooth",
-		});
-	});
 </script>
